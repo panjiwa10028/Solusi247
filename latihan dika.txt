@@ -1,0 +1,188 @@
+Welcome to Git (version 1.9.5-preview20141217)
+
+
+Run 'git help git' to display the help index.
+Run 'git help <command>' to display help for specific commands.
+
+247@GAMALAMA /usr
+$ git help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty Git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and integrate with another repository or a local bran
+
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+'git help -a' and 'git help -g' lists available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+247@GAMALAMA /usr
+$ ls
+Git Bash.vbs      bin  doc  git-cheetah  libexec  ssl           unins000.exe
+ReleaseNotes.rtf  cmd  etc  lib          share    unins000.dat
+
+247@GAMALAMA /usr
+$ cd c:
+
+247@GAMALAMA /c
+$ cd d:
+
+247@GAMALAMA /d
+$ cd GIT
+
+247@GAMALAMA /d/GIT
+$ git init
+Initialized empty Git repository in d:/GIT/.git/
+
+247@GAMALAMA /d/GIT (master)
+$ git add *.c
+fatal: pathspec '*.c' did not match any files
+
+247@GAMALAMA /d/GIT (master)
+$ git config --global user.name "hardika"
+
+247@GAMALAMA /d/GIT (master)
+$ git config --global user.email "hardikacatursapta@gmail.com"
+
+247@GAMALAMA /d/GIT (master)
+$ git clone https://github.com/hardikacatursapta/solusi247.git
+Cloning into 'solusi247'...
+warning: You appear to have cloned an empty repository.
+Checking connectivity... done.
+
+247@GAMALAMA /d/GIT (master)
+$ cd solusi247/
+
+247@GAMALAMA /d/GIT/solusi247 (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        coba.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+247@GAMALAMA /d/GIT/solusi247 (master)
+$ git add coba.txt
+coba.txt
+
+247@GAMALAMA /d/GIT/solusi247 (master)
+$ git add coba.txt
+coba.txt
+
+247@GAMALAMA /d/GIT/solusi247 (master)
+$ git add coba.txt
+coba.txt
+
+247@GAMALAMA /d/GIT/solusi247 (master)
+$ git add coba.txt
+
+247@GAMALAMA /d/GIT/solusi247 (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   coba.txt
+
+
+247@GAMALAMA /d/GIT/solusi247 (master)
+$ git commit
+[master (root-commit) 46c21b8] Latihan Git
+ 1 file changed, 603 insertions(+)
+ create mode 100644 coba.txt
+
+247@GAMALAMA /d/GIT/solusi247 (master)
+$ git remote add coba.txt https://github.com/hardikacatursapta/solusi247.git
+
+247@GAMALAMA /d/GIT/solusi247 (master)
+$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': hardikacatursapta
+Password for 'https://hardikacatursapta@github.com':
+No refs in common and none specified; doing nothing.
+Perhaps you should specify a branch such as 'master'.
+Everything up-to-date
+
+
+247@GAMALAMA /d/GIT/solusi247 (master)
+$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working directory clean
+
+247@GAMALAMA /d/GIT/solusi247 (master)
+$ ls
+coba.txt
+
+247@GAMALAMA /d/GIT/solusi247 (master)
+$ ls
+coba.txt
+
+247@GAMALAMA /d/GIT/solusi247 (master)
+$ git add coba.txt
+
+247@GAMALAMA /d/GIT/solusi247 (master)
+$ git push origin master
+Username for 'https://github.com': hardikacatursapta
+Password for 'https://hardikacatursapta@github.com':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 519 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/hardikacatursapta/solusi247.git
+ * [new branch]      master -> master
